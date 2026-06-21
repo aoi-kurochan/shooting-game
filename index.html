@@ -21,8 +21,12 @@
   }
   h1 { font-size: 18px; margin: 10px 0 6px; letter-spacing: 2px; color: #9fd0ff; }
   #info { font-size: 13px; color: #8a93b8; margin-bottom: 8px; }
-  #wrap { position: relative; }
+  #wrap { position: relative; max-width: 100%; }
   canvas {
+    display: block;
+    box-sizing: border-box; /* 枠線も幅に含めてはみ出しを防ぐ */
+    max-width: 100%;       /* スマホの画面幅に合わせて縮小 */
+    height: auto;          /* 縦横比はそのまま保つ */
     background: linear-gradient(#0a0f24, #0b1430);
     border: 2px solid #2a3566;
     border-radius: 10px;
